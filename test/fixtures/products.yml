@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+iphone14:
+  title: iPhone 14
+  description: En buen estado
+  price: 4000
+
+samsungS10:
+  title: Samsung s10+
+  description: Le falla la pila
+  price: 4500
