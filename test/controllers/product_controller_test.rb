@@ -12,4 +12,19 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.description', 'En buen estado'
     assert_select '.price', '4000'
   end
+  test 'render a new product form' do
+    get new_product_path
+    assert_response :success
+    assert_select 'form'
+  end
+  test 'allow to create a new product' do
+    post products_path, params: {
+      product: {
+        title: 'PC System 74',
+        description: 'La pila no funciona',
+        price: 6000
+      }
+    }
+    assert_redirected_to products_path
+  end
 end
