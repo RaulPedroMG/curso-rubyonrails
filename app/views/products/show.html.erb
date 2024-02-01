@@ -6,5 +6,8 @@
 <br /><br />
 <div class="d-flex flex-row">
   <%= link_to 'Edit Product', edit_product_path(@product), class: 'btn btn-primary mr-2' %>
-  <%= button_to 'Delete Product', product_path(@product), class: 'btn btn-danger', method: :delete, form: { data: { turbo_confirm: "¿Estás seguro?" } } %>
+  <%= link_to 'Delete Product', product_path(@product), class: 'btn btn-danger', data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  } %>
 </div>
