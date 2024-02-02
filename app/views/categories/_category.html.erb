@@ -1,0 +1,14 @@
+<div id="<%= dom_id category %>">
+  <p>
+    <strong>Name:</strong>
+    <%= category.name %>
+  </p>
+  <div class="d-flex flex-row">
+    <%= link_to t('.edit'), edit_category_path(category), class: 'btn btn-primary btn-sm mr-2' %>
+    <%= link_to t('.delete'), category_path(category), class: 'btn btn-danger btn-sm', data: {
+      turbo_method: :delete,
+      turbo_confirm: t('common.confirm')
+    } %>
+  </div>
+  <br />
+</div>

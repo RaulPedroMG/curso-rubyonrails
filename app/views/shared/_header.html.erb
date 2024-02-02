@@ -2,5 +2,6 @@
   <h1>Curso de Ruby</h1>
 <% end %>
 <div class="container">
-  <%= link_to t('.add'), new_product_path %>
+  <%= link_to t('.add'), new_product_path, class: 'mr-1' %> |
+  <%= link_to t('.categories'), categories_url, class: 'ml-1' %>
 </div>

@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   end
   private
   def locale_from_header
-    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+    request.env['HTTP_ACCEPT_LANGUAGE']&.scan(/^[a-z]{2}/)&.first || I18n.default_locale
   end
 end

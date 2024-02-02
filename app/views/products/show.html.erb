@@ -5,8 +5,8 @@
 <span class="price"><%= @product.price %></span>
 <br /><br />
 <div class="d-flex flex-row">
-  <%= link_to 'Edit Product', edit_product_path(@product), class: 'btn btn-primary mr-2' %>
-  <%= link_to 'Delete Product', product_path(@product), class: 'btn btn-danger', data: {
+  <%= link_to t('.edit'), edit_product_path(@product), class: 'btn btn-primary mr-2' %>
+  <%= link_to t('.delete'), product_path(@product), class: 'btn btn-danger', data: {
     turbo_method: :delete,
     turbo_confirm: t('common.confirm')
   } %>
