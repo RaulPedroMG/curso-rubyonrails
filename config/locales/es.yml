@@ -1,4 +1,5 @@
 es:
+  browse: "Elegir"
   activerecord:
     models:
       products: Producto
@@ -8,6 +9,8 @@ es:
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+        category: 'Categoría'
+        category_id: 'Categoría'
     errors:
       models:
         product:
@@ -17,7 +20,10 @@ es:
             description:
               blank: 'no puede estar vacío.'
             price:
-              blank: 'bo puede estar vacío.'
+              blank: 'no puede estar vacío.'
+            category:
+              required: 'no puede estar vacío.'
+              blank: 'no puede estar vacío.'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
@@ -26,6 +32,12 @@ es:
       add: 'Añadir producto'
       categories: 'Categorías'
   products:
+    form:
+      title: 'Título'
+      description: 'Descripción'
+      price: 'Precio'
+      photo: 'Foto'
+      category_id: 'Selecionar categoría'
     show:
       edit: 'Editar'
       delete: 'Eliminar'

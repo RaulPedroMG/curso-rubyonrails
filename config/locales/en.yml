@@ -28,6 +28,7 @@
 #       enabled: "ON"
 
 en:
+  browse: "Browse"
   hello: "Hello world"
   activerecord:
     models:
@@ -47,6 +48,8 @@ en:
             description:
               blank: "can't be blank"
             price:
+              blank: "can't be blank"
+            category:
               blank: "can't be blank"
   common:
     confirm: 'Are you sure?'

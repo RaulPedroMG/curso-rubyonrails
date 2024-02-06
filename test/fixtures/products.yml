@@ -4,8 +4,16 @@ iphone14:
   title: iPhone 14
   description: En buen estado
   price: 4000
+  category: videogames
 
 samsungS10:
   title: Samsung s10+
   description: Le falla la pila
   price: 4500
+  category: videogames
+
+air:
+  title: Macbook Air
+  description: le falta la bateria
+  price: 7500
+  category: computers

@@ -6,19 +6,30 @@
   <br />
   <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, type: 'text', class: 'form-control', placeholder: 'Título' %>
+    <%= form.text_field :title, type: 'text', class: 'form-control', placeholder: t('.title') %>
   </div>
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, class: 'form-control', placeholder: 'Descripción' %>
+    <%= form.text_area :description, class: 'form-control', placeholder: t('.description') %>
   </div>
   <div class="form-group">
     <%= form.label :price %>
-    <%= form.text_field :price, class: 'form-control', placeholder: 'Precio' %>
+    <%= form.text_field :price, class: 'form-control', placeholder: t('.price') %>
   </div>
   <div class="form-group">
-    <%= form.label :photo %>
-    <%= form.file_field :photo, class: 'form-control', placeholder: 'Foto' %>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {
+      prompt: t('.category_id')
+    },
+    {
+      class: 'custom-select'
+    } %>
+  </div>
+  <div class="form-group">
+    <div class="custom-file">
+      <%= form.label :photo, class: 'custom-file-label', for: 'customFile' %>
+      <%= form.file_field :photo, type: 'file', class: 'custom-file-input', id: 'customFile', placeholder: t('.photo') %>
+    </div>
   </div>
   <%= form.submit class: 'btn btn-primary' %>
 <% end %>
