@@ -24,11 +24,13 @@ module Curso
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")}
 
-
     # available languages
     config.i18n.available_locales = [:en, :es]
 
     # available by default
     config.i18n.default_locale = :es
+
+    # Allow multiquery
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end
